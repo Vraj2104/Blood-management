@@ -1,0 +1,130 @@
+.donor-schedule-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: #d7263d;
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.3);
+  padding: 2.5rem 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.donor-schedule-container h2 {
+  font-size: 2.4rem;
+  color: white;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.donor-schedule-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffffff, #ffffff);
+  border-radius: 2px;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.donor-schedule-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .donor-schedule-container {
+    padding: 1.5rem 1rem;
+    max-width: 100%;
+    margin: 1rem 0.5rem;
+  }
+
+  .donor-schedule-container h2 {
+    font-size: 1.6rem;
+  }
+}
+
+.donor-schedule-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.donor-schedule-form input,
+.donor-schedule-form select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+.donor-schedule-form button {
+  background: linear-gradient(135deg, #d7263d 0%, #b71c2a 100%);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  padding: 1.2rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 
+    0 8px 25px rgba(215, 38, 61, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+
+
+.donor-schedule-form button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s;
+}
+
+.donor-schedule-form button:hover::before {
+  left: 100%;
+}
+
+.donor-schedule-form button:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 
+    0 15px 35px rgba(215, 38, 61, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+.donor-schedule-form button:active {
+  transform: translateY(-2px) scale(1.02);
+}
