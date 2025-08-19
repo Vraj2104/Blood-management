@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://blood-management-backend-3hku.onrender.com';
+const API_BASE_URL = 'https://blood-management-backend-3hku.onrender.com/api';
 
 export async function getBloodStock() {
   const res = await fetch(`${API_BASE_URL}/blood-stock`);
